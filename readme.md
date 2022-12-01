@@ -39,3 +39,8 @@ Também é possível acessar os dados dos produtos acessando diretamente as rota
 Listagem de produtos: `http://localhost:5000/produtos/`
 <br>
 Listagem de produto específico: `http://localhost:5000/produtos/3`
+<br><br>
+## LINKS
+Link repositório front end: https://github.com/johntvale/desafio-tecnico-icts-front-end
+<br>
+Link repositório back end: https://github.com/johntvale/desafio-tecnico-icts-back-end
