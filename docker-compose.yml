@@ -1,0 +1,41 @@
+version: '3'
+services:
+  mysql_db:
+    container_name: mysql_db
+    image: mysql:8.0.29
+    restart: always
+    ports:
+      - '3307:3306'
+    volumes:
+      - ./db/script.sql:/usr/script.sql
+      - ./db/script.sql:/docker-entrypoint-initdb.d/script.sql
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: desafiotecnicoicts
+    networks:
+      - desafio_tecnico_app
+  api-server:
+    container_name: express-api
+    build: ./express-api/
+    restart: always
+    ports:
+      - '5000:5000'
+    environment:
+      MYSQL_HOST: mysql_db
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: desafiotecnicoicts
+      MYSQL_DATABASE: ICTSProductsManager
+      PORT: 5000
+    networks:
+      - desafio_tecnico_app
+  react-app:
+    container_name: react-app
+    build: ./react-app/
+    ports:
+      - '3000:3000'
+    networks:
+      - desafio_tecnico_app
+networks:
+  desafio_tecnico_app:
+    driver: bridge
