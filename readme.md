@@ -30,3 +30,6 @@ Dentro do terminal do container "mysql_db", digite o comando abaixo para acessar
 em seguida digite a senha: `desafiotecnicoicts`
 <br><br>
 OBS: Caso necessário, execute novamentos os passos 1 e 2 para restauração do banco de dados
+<br><br>
+## Execução
+Após a inicialização, a aplicação Frontend React estará disponível em `http://localhost:3000`, e o Backend Express em `http://localhost:5000/produtos`
