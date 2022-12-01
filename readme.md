@@ -32,4 +32,10 @@ em seguida digite a senha: `desafiotecnicoicts`
 OBS: Caso necessário, execute novamentos os passos 1 e 2 para restauração do banco de dados
 <br><br>
 ## Execução
-Após a inicialização, a aplicação Frontend React estará disponível em `http://localhost:3000`, e o Backend Express em `http://localhost:5000/produtos`
+Após a inicialização, a aplicação Frontend React estará disponível em `http://localhost:3000`, e o Backend Express em `http://localhost:5000/`
+<br><br>
+Também é possível acessar os dados dos produtos acessando diretamente as rotas abaixo:
+<br>
+Listagem de produtos: `http://localhost:5000/produtos/`
+<br>
+Listagem de produto específico: `http://localhost:5000/produtos/3`
